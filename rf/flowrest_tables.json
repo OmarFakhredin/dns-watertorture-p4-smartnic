@@ -1,0 +1,5552 @@
+{
+  "schema": "dns-flowrest-tables-v1",
+  "model_sha256": "24027905ccd718b7544cc7e06022aff2bb86aef60129e6f09f36d6274188a745",
+  "features": [
+    "zone_rate_k",
+    "distinct_est_k",
+    "src_spread_k",
+    "client_zone_rate_k",
+    "nxd_count_k",
+    "bigram_k"
+  ],
+  "used_features": [
+    0,
+    1
+  ],
+  "encoders": [
+    {
+      "feature": 0,
+      "name": "zone_rate_k",
+      "rows": [
+        {
+          "low": 0,
+          "high": 17,
+          "codes": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "low": 18,
+          "high": 18,
+          "codes": [
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "low": 19,
+          "high": 22,
+          "codes": [
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "low": 23,
+          "high": 23,
+          "codes": [
+            96,
+            64,
+            96
+          ]
+        },
+        {
+          "low": 24,
+          "high": 65535,
+          "codes": [
+            96,
+            96,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "feature": 1,
+      "name": "distinct_est_k",
+      "rows": [
+        {
+          "low": 0,
+          "high": 3,
+          "codes": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "low": 4,
+          "high": 5,
+          "codes": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "low": 6,
+          "high": 6,
+          "codes": [
+            4,
+            12,
+            4
+          ]
+        },
+        {
+          "low": 7,
+          "high": 8,
+          "codes": [
+            4,
+            12,
+            12
+          ]
+        },
+        {
+          "low": 9,
+          "high": 17,
+          "codes": [
+            12,
+            12,
+            12
+          ]
+        },
+        {
+          "low": 18,
+          "high": 18,
+          "codes": [
+            12,
+            28,
+            28
+          ]
+        },
+        {
+          "low": 19,
+          "high": 22,
+          "codes": [
+            28,
+            28,
+            28
+          ]
+        },
+        {
+          "low": 23,
+          "high": 23,
+          "codes": [
+            30,
+            28,
+            30
+          ]
+        },
+        {
+          "low": 24,
+          "high": 596,
+          "codes": [
+            30,
+            30,
+            30
+          ]
+        },
+        {
+          "low": 597,
+          "high": 598,
+          "codes": [
+            31,
+            30,
+            30
+          ]
+        },
+        {
+          "low": 599,
+          "high": 599,
+          "codes": [
+            31,
+            31,
+            30
+          ]
+        },
+        {
+          "low": 600,
+          "high": 65535,
+          "codes": [
+            31,
+            31,
+            31
+          ]
+        }
+      ]
+    }
+  ],
+  "trees": [
+    {
+      "id": 0,
+      "width": 7,
+      "zone_width": 2,
+      "distinct_width": 5,
+      "node_bit_positions": {
+        "5": 6,
+        "9": 5,
+        "0": 4,
+        "1": 3,
+        "2": 2,
+        "8": 1,
+        "12": 0
+      },
+      "leaves": [
+        {
+          "id": 0,
+          "node": 3,
+          "value": 0,
+          "mask": 28,
+          "attack_probability": 0.01203158502435031,
+          "class": 0
+        },
+        {
+          "id": 1,
+          "node": 4,
+          "value": 4,
+          "mask": 28,
+          "attack_probability": 0.08007775690594028,
+          "class": 0
+        },
+        {
+          "id": 2,
+          "node": 6,
+          "value": 8,
+          "mask": 88,
+          "attack_probability": 0.5133035389078434,
+          "class": 1
+        },
+        {
+          "id": 3,
+          "node": 7,
+          "value": 72,
+          "mask": 88,
+          "attack_probability": 0.0,
+          "class": 0
+        },
+        {
+          "id": 4,
+          "node": 10,
+          "value": 16,
+          "mask": 50,
+          "attack_probability": 0.8818551144178994,
+          "class": 1
+        },
+        {
+          "id": 5,
+          "node": 11,
+          "value": 48,
+          "mask": 50,
+          "attack_probability": 0.0,
+          "class": 0
+        },
+        {
+          "id": 6,
+          "node": 13,
+          "value": 18,
+          "mask": 19,
+          "attack_probability": 0.903920300633074,
+          "class": 1
+        },
+        {
+          "id": 7,
+          "node": 14,
+          "value": 19,
+          "mask": 19,
+          "attack_probability": 0.7014554049011071,
+          "class": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "width": 7,
+      "zone_width": 2,
+      "distinct_width": 5,
+      "node_bit_positions": {
+        "5": 6,
+        "9": 5,
+        "0": 4,
+        "1": 3,
+        "2": 2,
+        "8": 1,
+        "12": 0
+      },
+      "leaves": [
+        {
+          "id": 0,
+          "node": 3,
+          "value": 0,
+          "mask": 28,
+          "attack_probability": 0.011555773006819177,
+          "class": 0
+        },
+        {
+          "id": 1,
+          "node": 4,
+          "value": 4,
+          "mask": 28,
+          "attack_probability": 0.061816242959368745,
+          "class": 0
+        },
+        {
+          "id": 2,
+          "node": 6,
+          "value": 8,
+          "mask": 88,
+          "attack_probability": 0.3091726520094453,
+          "class": 0
+        },
+        {
+          "id": 3,
+          "node": 7,
+          "value": 72,
+          "mask": 88,
+          "attack_probability": 0.0,
+          "class": 0
+        },
+        {
+          "id": 4,
+          "node": 10,
+          "value": 16,
+          "mask": 50,
+          "attack_probability": 0.8877010119241503,
+          "class": 1
+        },
+        {
+          "id": 5,
+          "node": 11,
+          "value": 48,
+          "mask": 50,
+          "attack_probability": 0.0,
+          "class": 0
+        },
+        {
+          "id": 6,
+          "node": 13,
+          "value": 18,
+          "mask": 19,
+          "attack_probability": 0.9041837207213583,
+          "class": 1
+        },
+        {
+          "id": 7,
+          "node": 14,
+          "value": 19,
+          "mask": 19,
+          "attack_probability": 0.5731273503404818,
+          "class": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "width": 7,
+      "zone_width": 2,
+      "distinct_width": 5,
+      "node_bit_positions": {
+        "5": 6,
+        "9": 5,
+        "0": 4,
+        "1": 3,
+        "2": 2,
+        "8": 1,
+        "12": 0
+      },
+      "leaves": [
+        {
+          "id": 0,
+          "node": 3,
+          "value": 0,
+          "mask": 28,
+          "attack_probability": 0.011720303341622692,
+          "class": 0
+        },
+        {
+          "id": 1,
+          "node": 4,
+          "value": 4,
+          "mask": 28,
+          "attack_probability": 0.07083734918242532,
+          "class": 0
+        },
+        {
+          "id": 2,
+          "node": 6,
+          "value": 8,
+          "mask": 88,
+          "attack_probability": 0.3776498028839936,
+          "class": 0
+        },
+        {
+          "id": 3,
+          "node": 7,
+          "value": 72,
+          "mask": 88,
+          "attack_probability": 0.0,
+          "class": 0
+        },
+        {
+          "id": 4,
+          "node": 10,
+          "value": 16,
+          "mask": 50,
+          "attack_probability": 0.8981667402129098,
+          "class": 1
+        },
+        {
+          "id": 5,
+          "node": 11,
+          "value": 48,
+          "mask": 50,
+          "attack_probability": 0.0,
+          "class": 0
+        },
+        {
+          "id": 6,
+          "node": 13,
+          "value": 18,
+          "mask": 19,
+          "attack_probability": 0.9023728624040743,
+          "class": 1
+        },
+        {
+          "id": 7,
+          "node": 14,
+          "value": 19,
+          "mask": 19,
+          "attack_probability": 0.17276877355311132,
+          "class": 0
+        }
+      ]
+    }
+  ],
+  "aggregation": [
+    {
+      "leaves": [
+        0,
+        0,
+        0
+      ],
+      "mean_attack_probability": 0.011769220457597393,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        0,
+        1
+      ],
+      "mean_attack_probability": 0.0314749024045316,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        0,
+        2
+      ],
+      "mean_attack_probability": 0.13374572030505436,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        0,
+        3
+      ],
+      "mean_attack_probability": 0.007862452677056495,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        0,
+        4
+      ],
+      "mean_attack_probability": 0.3072513660813598,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        0,
+        5
+      ],
+      "mean_attack_probability": 0.007862452677056495,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        0,
+        6
+      ],
+      "mean_attack_probability": 0.30865340681174797,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        0,
+        7
+      ],
+      "mean_attack_probability": 0.06545204386142693,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        1,
+        0
+      ],
+      "mean_attack_probability": 0.02852271044178058,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        1,
+        1
+      ],
+      "mean_attack_probability": 0.04822839238871479,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        1,
+        2
+      ],
+      "mean_attack_probability": 0.15049921028923754,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        1,
+        3
+      ],
+      "mean_attack_probability": 0.024615942661239686,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        1,
+        4
+      ],
+      "mean_attack_probability": 0.3240048560655429,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        1,
+        5
+      ],
+      "mean_attack_probability": 0.024615942661239686,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        1,
+        6
+      ],
+      "mean_attack_probability": 0.3254068967959311,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        1,
+        7
+      ],
+      "mean_attack_probability": 0.08220553384561012,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        2,
+        0
+      ],
+      "mean_attack_probability": 0.11097484679180612,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        2,
+        1
+      ],
+      "mean_attack_probability": 0.13068052873874034,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        2,
+        2
+      ],
+      "mean_attack_probability": 0.23295134663926306,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        2,
+        3
+      ],
+      "mean_attack_probability": 0.10706807901126521,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        2,
+        4
+      ],
+      "mean_attack_probability": 0.4064569924155685,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        2,
+        5
+      ],
+      "mean_attack_probability": 0.10706807901126521,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        2,
+        6
+      ],
+      "mean_attack_probability": 0.4078590331459567,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        2,
+        7
+      ],
+      "mean_attack_probability": 0.16465767019563565,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        3,
+        0
+      ],
+      "mean_attack_probability": 0.007917296121991,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        3,
+        1
+      ],
+      "mean_attack_probability": 0.02762297806892521,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        3,
+        2
+      ],
+      "mean_attack_probability": 0.12989379596944797,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        3,
+        3
+      ],
+      "mean_attack_probability": 0.004010528341450104,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        3,
+        4
+      ],
+      "mean_attack_probability": 0.30339944174575334,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        3,
+        5
+      ],
+      "mean_attack_probability": 0.004010528341450104,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        3,
+        6
+      ],
+      "mean_attack_probability": 0.3048014824761415,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        3,
+        7
+      ],
+      "mean_attack_probability": 0.06160011952582054,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        4,
+        0
+      ],
+      "mean_attack_probability": 0.3038176334300411,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        4,
+        1
+      ],
+      "mean_attack_probability": 0.3235233153769753,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        4,
+        2
+      ],
+      "mean_attack_probability": 0.4257941332774981,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        4,
+        3
+      ],
+      "mean_attack_probability": 0.2999108656495002,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        4,
+        4
+      ],
+      "mean_attack_probability": 0.5992997790538035,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        0,
+        4,
+        5
+      ],
+      "mean_attack_probability": 0.2999108656495002,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        4,
+        6
+      ],
+      "mean_attack_probability": 0.6007018197841917,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        0,
+        4,
+        7
+      ],
+      "mean_attack_probability": 0.35750045683387066,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        5,
+        0
+      ],
+      "mean_attack_probability": 0.007917296121991,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        5,
+        1
+      ],
+      "mean_attack_probability": 0.02762297806892521,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        5,
+        2
+      ],
+      "mean_attack_probability": 0.12989379596944797,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        5,
+        3
+      ],
+      "mean_attack_probability": 0.004010528341450104,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        5,
+        4
+      ],
+      "mean_attack_probability": 0.30339944174575334,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        5,
+        5
+      ],
+      "mean_attack_probability": 0.004010528341450104,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        5,
+        6
+      ],
+      "mean_attack_probability": 0.3048014824761415,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        5,
+        7
+      ],
+      "mean_attack_probability": 0.06160011952582054,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        6,
+        0
+      ],
+      "mean_attack_probability": 0.3093118696957771,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        6,
+        1
+      ],
+      "mean_attack_probability": 0.32901755164271135,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        6,
+        2
+      ],
+      "mean_attack_probability": 0.4312883695432341,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        6,
+        3
+      ],
+      "mean_attack_probability": 0.30540510191523623,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        6,
+        4
+      ],
+      "mean_attack_probability": 0.6047940153195395,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        0,
+        6,
+        5
+      ],
+      "mean_attack_probability": 0.30540510191523623,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        6,
+        6
+      ],
+      "mean_attack_probability": 0.6061960560499277,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        0,
+        6,
+        7
+      ],
+      "mean_attack_probability": 0.36299469309960664,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        7,
+        0
+      ],
+      "mean_attack_probability": 0.19895974623548493,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        7,
+        1
+      ],
+      "mean_attack_probability": 0.21866542818241916,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        7,
+        2
+      ],
+      "mean_attack_probability": 0.3209362460829419,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        7,
+        3
+      ],
+      "mean_attack_probability": 0.19505297845494404,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        7,
+        4
+      ],
+      "mean_attack_probability": 0.4944418918592473,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        0,
+        7,
+        5
+      ],
+      "mean_attack_probability": 0.19505297845494404,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        0,
+        7,
+        6
+      ],
+      "mean_attack_probability": 0.4958439325896355,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        0,
+        7,
+        7
+      ],
+      "mean_attack_probability": 0.2526425696393145,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        0,
+        0
+      ],
+      "mean_attack_probability": 0.034451277751460715,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        0,
+        1
+      ],
+      "mean_attack_probability": 0.05415695969839493,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        0,
+        2
+      ],
+      "mean_attack_probability": 0.15642777759891768,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        0,
+        3
+      ],
+      "mean_attack_probability": 0.030544509970919818,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        0,
+        4
+      ],
+      "mean_attack_probability": 0.3299334233752231,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        0,
+        5
+      ],
+      "mean_attack_probability": 0.030544509970919818,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        0,
+        6
+      ],
+      "mean_attack_probability": 0.33133546410561127,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        0,
+        7
+      ],
+      "mean_attack_probability": 0.08813410115529026,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        1,
+        0
+      ],
+      "mean_attack_probability": 0.05120476773564391,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        1,
+        1
+      ],
+      "mean_attack_probability": 0.0709104496825781,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        1,
+        2
+      ],
+      "mean_attack_probability": 0.17318126758310085,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        1,
+        3
+      ],
+      "mean_attack_probability": 0.04729799995510301,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        1,
+        4
+      ],
+      "mean_attack_probability": 0.3466869133594062,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        1,
+        5
+      ],
+      "mean_attack_probability": 0.04729799995510301,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        1,
+        6
+      ],
+      "mean_attack_probability": 0.34808895408979446,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        1,
+        7
+      ],
+      "mean_attack_probability": 0.10488759113947345,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        2,
+        0
+      ],
+      "mean_attack_probability": 0.13365690408566944,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        2,
+        1
+      ],
+      "mean_attack_probability": 0.15336258603260364,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        2,
+        2
+      ],
+      "mean_attack_probability": 0.2556334039331264,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        2,
+        3
+      ],
+      "mean_attack_probability": 0.12975013630512852,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        2,
+        4
+      ],
+      "mean_attack_probability": 0.4291390497094318,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        2,
+        5
+      ],
+      "mean_attack_probability": 0.12975013630512852,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        2,
+        6
+      ],
+      "mean_attack_probability": 0.43054109043982,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        2,
+        7
+      ],
+      "mean_attack_probability": 0.18733972748949898,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        3,
+        0
+      ],
+      "mean_attack_probability": 0.030599353415854322,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        3,
+        1
+      ],
+      "mean_attack_probability": 0.05030503536278854,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        3,
+        2
+      ],
+      "mean_attack_probability": 0.15257585326331127,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        3,
+        3
+      ],
+      "mean_attack_probability": 0.026692585635313428,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        3,
+        4
+      ],
+      "mean_attack_probability": 0.3260814990396167,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        3,
+        5
+      ],
+      "mean_attack_probability": 0.026692585635313428,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        3,
+        6
+      ],
+      "mean_attack_probability": 0.3274835397700049,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        3,
+        7
+      ],
+      "mean_attack_probability": 0.08428217681968386,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        4,
+        0
+      ],
+      "mean_attack_probability": 0.32649969072390445,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        4,
+        1
+      ],
+      "mean_attack_probability": 0.3462053726708387,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        4,
+        2
+      ],
+      "mean_attack_probability": 0.4484761905713614,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        4,
+        3
+      ],
+      "mean_attack_probability": 0.32259292294336356,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        4,
+        4
+      ],
+      "mean_attack_probability": 0.6219818363476668,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        1,
+        4,
+        5
+      ],
+      "mean_attack_probability": 0.32259292294336356,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        4,
+        6
+      ],
+      "mean_attack_probability": 0.623383877078055,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        1,
+        4,
+        7
+      ],
+      "mean_attack_probability": 0.38018251412773396,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        5,
+        0
+      ],
+      "mean_attack_probability": 0.030599353415854322,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        5,
+        1
+      ],
+      "mean_attack_probability": 0.05030503536278854,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        5,
+        2
+      ],
+      "mean_attack_probability": 0.15257585326331127,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        5,
+        3
+      ],
+      "mean_attack_probability": 0.026692585635313428,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        5,
+        4
+      ],
+      "mean_attack_probability": 0.3260814990396167,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        5,
+        5
+      ],
+      "mean_attack_probability": 0.026692585635313428,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        5,
+        6
+      ],
+      "mean_attack_probability": 0.3274835397700049,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        5,
+        7
+      ],
+      "mean_attack_probability": 0.08428217681968386,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        6,
+        0
+      ],
+      "mean_attack_probability": 0.3319939269896404,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        6,
+        1
+      ],
+      "mean_attack_probability": 0.35169960893657465,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        6,
+        2
+      ],
+      "mean_attack_probability": 0.45397042683709743,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        6,
+        3
+      ],
+      "mean_attack_probability": 0.32808715920909953,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        6,
+        4
+      ],
+      "mean_attack_probability": 0.6274760726134028,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        1,
+        6,
+        5
+      ],
+      "mean_attack_probability": 0.32808715920909953,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        6,
+        6
+      ],
+      "mean_attack_probability": 0.628878113343791,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        1,
+        6,
+        7
+      ],
+      "mean_attack_probability": 0.38567675039347,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        7,
+        0
+      ],
+      "mean_attack_probability": 0.22164180352934826,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        7,
+        1
+      ],
+      "mean_attack_probability": 0.24134748547628246,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        7,
+        2
+      ],
+      "mean_attack_probability": 0.3436183033768052,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        7,
+        3
+      ],
+      "mean_attack_probability": 0.21773503574880737,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        7,
+        4
+      ],
+      "mean_attack_probability": 0.5171239491531107,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        1,
+        7,
+        5
+      ],
+      "mean_attack_probability": 0.21773503574880737,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        1,
+        7,
+        6
+      ],
+      "mean_attack_probability": 0.5185259898834987,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        1,
+        7,
+        7
+      ],
+      "mean_attack_probability": 0.2753246269331778,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        0,
+        0
+      ],
+      "mean_attack_probability": 0.17885987175209508,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        0,
+        1
+      ],
+      "mean_attack_probability": 0.1985655536990293,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        0,
+        2
+      ],
+      "mean_attack_probability": 0.30083637159955207,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        0,
+        3
+      ],
+      "mean_attack_probability": 0.1749531039715542,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        0,
+        4
+      ],
+      "mean_attack_probability": 0.47434201737585746,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        0,
+        5
+      ],
+      "mean_attack_probability": 0.1749531039715542,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        0,
+        6
+      ],
+      "mean_attack_probability": 0.4757440581062456,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        0,
+        7
+      ],
+      "mean_attack_probability": 0.23254269515592463,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        1,
+        0
+      ],
+      "mean_attack_probability": 0.1956133617362783,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        1,
+        1
+      ],
+      "mean_attack_probability": 0.2153190436832125,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        1,
+        2
+      ],
+      "mean_attack_probability": 0.31758986158373526,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        1,
+        3
+      ],
+      "mean_attack_probability": 0.1917065939557374,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        1,
+        4
+      ],
+      "mean_attack_probability": 0.49109550736004065,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        1,
+        5
+      ],
+      "mean_attack_probability": 0.1917065939557374,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        1,
+        6
+      ],
+      "mean_attack_probability": 0.49249754809042884,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        1,
+        7
+      ],
+      "mean_attack_probability": 0.24929618514010785,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        2,
+        0
+      ],
+      "mean_attack_probability": 0.2780654980863038,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        2,
+        1
+      ],
+      "mean_attack_probability": 0.29777118003323805,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        2,
+        2
+      ],
+      "mean_attack_probability": 0.4000419979337608,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        2,
+        3
+      ],
+      "mean_attack_probability": 0.27415873030576293,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        2,
+        4
+      ],
+      "mean_attack_probability": 0.5735476437100662,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        2,
+        5
+      ],
+      "mean_attack_probability": 0.27415873030576293,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        2,
+        6
+      ],
+      "mean_attack_probability": 0.5749496844404544,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        2,
+        7
+      ],
+      "mean_attack_probability": 0.33174832149013334,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        3,
+        0
+      ],
+      "mean_attack_probability": 0.1750079474164887,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        3,
+        1
+      ],
+      "mean_attack_probability": 0.19471362936342293,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        3,
+        2
+      ],
+      "mean_attack_probability": 0.29698444726394563,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        3,
+        3
+      ],
+      "mean_attack_probability": 0.17110117963594781,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        3,
+        4
+      ],
+      "mean_attack_probability": 0.4704900930402511,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        3,
+        5
+      ],
+      "mean_attack_probability": 0.17110117963594781,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        3,
+        6
+      ],
+      "mean_attack_probability": 0.47189213377063927,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        3,
+        7
+      ],
+      "mean_attack_probability": 0.22869077082031822,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        4,
+        0
+      ],
+      "mean_attack_probability": 0.4709082847245388,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        4,
+        1
+      ],
+      "mean_attack_probability": 0.490613966671473,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        4,
+        2
+      ],
+      "mean_attack_probability": 0.5928847845719958,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        4,
+        3
+      ],
+      "mean_attack_probability": 0.4670015169439979,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        4,
+        4
+      ],
+      "mean_attack_probability": 0.7663904303483012,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        4,
+        5
+      ],
+      "mean_attack_probability": 0.4670015169439979,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        4,
+        6
+      ],
+      "mean_attack_probability": 0.7677924710786893,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        4,
+        7
+      ],
+      "mean_attack_probability": 0.5245911081283684,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        5,
+        0
+      ],
+      "mean_attack_probability": 0.1750079474164887,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        5,
+        1
+      ],
+      "mean_attack_probability": 0.19471362936342293,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        5,
+        2
+      ],
+      "mean_attack_probability": 0.29698444726394563,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        5,
+        3
+      ],
+      "mean_attack_probability": 0.17110117963594781,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        5,
+        4
+      ],
+      "mean_attack_probability": 0.4704900930402511,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        5,
+        5
+      ],
+      "mean_attack_probability": 0.17110117963594781,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        5,
+        6
+      ],
+      "mean_attack_probability": 0.47189213377063927,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        5,
+        7
+      ],
+      "mean_attack_probability": 0.22869077082031822,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        2,
+        6,
+        0
+      ],
+      "mean_attack_probability": 0.47640252099027486,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        6,
+        1
+      ],
+      "mean_attack_probability": 0.49610820293720903,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        6,
+        2
+      ],
+      "mean_attack_probability": 0.5983790208377318,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        6,
+        3
+      ],
+      "mean_attack_probability": 0.47249575320973386,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        6,
+        4
+      ],
+      "mean_attack_probability": 0.7718846666140372,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        6,
+        5
+      ],
+      "mean_attack_probability": 0.47249575320973386,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        6,
+        6
+      ],
+      "mean_attack_probability": 0.7732867073444254,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        6,
+        7
+      ],
+      "mean_attack_probability": 0.5300853443941044,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        7,
+        0
+      ],
+      "mean_attack_probability": 0.36605039752998264,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        7,
+        1
+      ],
+      "mean_attack_probability": 0.3857560794769168,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        7,
+        2
+      ],
+      "mean_attack_probability": 0.4880268973774396,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        7,
+        3
+      ],
+      "mean_attack_probability": 0.36214362974944175,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        7,
+        4
+      ],
+      "mean_attack_probability": 0.661532543153745,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        7,
+        5
+      ],
+      "mean_attack_probability": 0.36214362974944175,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        7,
+        6
+      ],
+      "mean_attack_probability": 0.6629345838841332,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        2,
+        7,
+        7
+      ],
+      "mean_attack_probability": 0.4197332209338122,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        3,
+        0,
+        0
+      ],
+      "mean_attack_probability": 0.00775869211614729,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        0,
+        1
+      ],
+      "mean_attack_probability": 0.027464374063081498,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        0,
+        2
+      ],
+      "mean_attack_probability": 0.12973519196360425,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        0,
+        3
+      ],
+      "mean_attack_probability": 0.0038519243356063926,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        0,
+        4
+      ],
+      "mean_attack_probability": 0.3032408377399097,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        0,
+        5
+      ],
+      "mean_attack_probability": 0.0038519243356063926,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        0,
+        6
+      ],
+      "mean_attack_probability": 0.30464287847029786,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        0,
+        7
+      ],
+      "mean_attack_probability": 0.061441515519976835,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        1,
+        0
+      ],
+      "mean_attack_probability": 0.024512182100330477,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        1,
+        1
+      ],
+      "mean_attack_probability": 0.04421786404726469,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        1,
+        2
+      ],
+      "mean_attack_probability": 0.14648868194778744,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        1,
+        3
+      ],
+      "mean_attack_probability": 0.020605414319789583,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        1,
+        4
+      ],
+      "mean_attack_probability": 0.3199943277240928,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        1,
+        5
+      ],
+      "mean_attack_probability": 0.020605414319789583,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        1,
+        6
+      ],
+      "mean_attack_probability": 0.321396368454481,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        1,
+        7
+      ],
+      "mean_attack_probability": 0.07819500550416002,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        2,
+        0
+      ],
+      "mean_attack_probability": 0.10696431845035602,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        2,
+        1
+      ],
+      "mean_attack_probability": 0.12667000039729023,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        2,
+        2
+      ],
+      "mean_attack_probability": 0.228940818297813,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        2,
+        3
+      ],
+      "mean_attack_probability": 0.1030575506698151,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        2,
+        4
+      ],
+      "mean_attack_probability": 0.4024464640741184,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        2,
+        5
+      ],
+      "mean_attack_probability": 0.1030575506698151,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        2,
+        6
+      ],
+      "mean_attack_probability": 0.40384850480450657,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        2,
+        7
+      ],
+      "mean_attack_probability": 0.16064714185418555,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        3,
+        0
+      ],
+      "mean_attack_probability": 0.003906767780540897,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        3,
+        1
+      ],
+      "mean_attack_probability": 0.023612449727475105,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        3,
+        2
+      ],
+      "mean_attack_probability": 0.12588326762799787,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        3,
+        3
+      ],
+      "mean_attack_probability": 0.0,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        3,
+        4
+      ],
+      "mean_attack_probability": 0.29938891340430324,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        3,
+        5
+      ],
+      "mean_attack_probability": 0.0,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        3,
+        6
+      ],
+      "mean_attack_probability": 0.3007909541346914,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        3,
+        7
+      ],
+      "mean_attack_probability": 0.05758959118437044,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        4,
+        0
+      ],
+      "mean_attack_probability": 0.299807105088591,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        4,
+        1
+      ],
+      "mean_attack_probability": 0.3195127870355252,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        4,
+        2
+      ],
+      "mean_attack_probability": 0.42178360493604794,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        4,
+        3
+      ],
+      "mean_attack_probability": 0.2959003373080501,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        4,
+        4
+      ],
+      "mean_attack_probability": 0.5952892507123534,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        3,
+        4,
+        5
+      ],
+      "mean_attack_probability": 0.2959003373080501,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        4,
+        6
+      ],
+      "mean_attack_probability": 0.5966912914427415,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        3,
+        4,
+        7
+      ],
+      "mean_attack_probability": 0.3534899284924205,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        5,
+        0
+      ],
+      "mean_attack_probability": 0.003906767780540897,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        5,
+        1
+      ],
+      "mean_attack_probability": 0.023612449727475105,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        5,
+        2
+      ],
+      "mean_attack_probability": 0.12588326762799787,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        5,
+        3
+      ],
+      "mean_attack_probability": 0.0,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        5,
+        4
+      ],
+      "mean_attack_probability": 0.29938891340430324,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        5,
+        5
+      ],
+      "mean_attack_probability": 0.0,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        5,
+        6
+      ],
+      "mean_attack_probability": 0.3007909541346914,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        5,
+        7
+      ],
+      "mean_attack_probability": 0.05758959118437044,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        6,
+        0
+      ],
+      "mean_attack_probability": 0.305301341354327,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        6,
+        1
+      ],
+      "mean_attack_probability": 0.32500702330126124,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        6,
+        2
+      ],
+      "mean_attack_probability": 0.42727784120178397,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        6,
+        3
+      ],
+      "mean_attack_probability": 0.30139457357378613,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        6,
+        4
+      ],
+      "mean_attack_probability": 0.6007834869780894,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        3,
+        6,
+        5
+      ],
+      "mean_attack_probability": 0.30139457357378613,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        6,
+        6
+      ],
+      "mean_attack_probability": 0.6021855277084776,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        3,
+        6,
+        7
+      ],
+      "mean_attack_probability": 0.3589841647581566,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        7,
+        0
+      ],
+      "mean_attack_probability": 0.19494921789403483,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        7,
+        1
+      ],
+      "mean_attack_probability": 0.21465489984096905,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        7,
+        2
+      ],
+      "mean_attack_probability": 0.31692571774149175,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        7,
+        3
+      ],
+      "mean_attack_probability": 0.19104245011349394,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        7,
+        4
+      ],
+      "mean_attack_probability": 0.4904313635177972,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        3,
+        7,
+        5
+      ],
+      "mean_attack_probability": 0.19104245011349394,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        3,
+        7,
+        6
+      ],
+      "mean_attack_probability": 0.49183340424818534,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        3,
+        7,
+        7
+      ],
+      "mean_attack_probability": 0.24863204129786434,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        0,
+        0
+      ],
+      "mean_attack_probability": 0.30171039692211377,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        0,
+        1
+      ],
+      "mean_attack_probability": 0.321416078869048,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        0,
+        2
+      ],
+      "mean_attack_probability": 0.4236868967695708,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        0,
+        3
+      ],
+      "mean_attack_probability": 0.2978036291415729,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        0,
+        4
+      ],
+      "mean_attack_probability": 0.5971925425458761,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        0,
+        5
+      ],
+      "mean_attack_probability": 0.2978036291415729,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        0,
+        6
+      ],
+      "mean_attack_probability": 0.5985945832762644,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        0,
+        7
+      ],
+      "mean_attack_probability": 0.35539322032594334,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        1,
+        0
+      ],
+      "mean_attack_probability": 0.31846388690629696,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        1,
+        1
+      ],
+      "mean_attack_probability": 0.3381695688532312,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        1,
+        2
+      ],
+      "mean_attack_probability": 0.4404403867537539,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        1,
+        3
+      ],
+      "mean_attack_probability": 0.31455711912575607,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        1,
+        4
+      ],
+      "mean_attack_probability": 0.6139460325300593,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        1,
+        5
+      ],
+      "mean_attack_probability": 0.31455711912575607,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        1,
+        6
+      ],
+      "mean_attack_probability": 0.6153480732604475,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        1,
+        7
+      ],
+      "mean_attack_probability": 0.3721467103101265,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        2,
+        0
+      ],
+      "mean_attack_probability": 0.4009160232563225,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        2,
+        1
+      ],
+      "mean_attack_probability": 0.42062170520325665,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        2,
+        2
+      ],
+      "mean_attack_probability": 0.5228925231037794,
+      "probability_score": 8,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        2,
+        3
+      ],
+      "mean_attack_probability": 0.3970092554757816,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        2,
+        4
+      ],
+      "mean_attack_probability": 0.6963981688800849,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        2,
+        5
+      ],
+      "mean_attack_probability": 0.3970092554757816,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        2,
+        6
+      ],
+      "mean_attack_probability": 0.697800209610473,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        2,
+        7
+      ],
+      "mean_attack_probability": 0.45459884666015205,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        3,
+        0
+      ],
+      "mean_attack_probability": 0.2978584725865074,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        3,
+        1
+      ],
+      "mean_attack_probability": 0.3175641545334416,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        3,
+        2
+      ],
+      "mean_attack_probability": 0.41983497243396434,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        3,
+        3
+      ],
+      "mean_attack_probability": 0.2939517048059665,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        3,
+        4
+      ],
+      "mean_attack_probability": 0.5933406182102697,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        3,
+        5
+      ],
+      "mean_attack_probability": 0.2939517048059665,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        3,
+        6
+      ],
+      "mean_attack_probability": 0.5947426589406579,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        3,
+        7
+      ],
+      "mean_attack_probability": 0.35154129599033695,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        4,
+        0
+      ],
+      "mean_attack_probability": 0.5937588098945575,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        4,
+        1
+      ],
+      "mean_attack_probability": 0.6134644918414917,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        4,
+        2
+      ],
+      "mean_attack_probability": 0.7157353097420144,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        4,
+        3
+      ],
+      "mean_attack_probability": 0.5898520421140167,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        4,
+        4
+      ],
+      "mean_attack_probability": 0.8892409555183199,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        4,
+        5
+      ],
+      "mean_attack_probability": 0.5898520421140167,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        4,
+        6
+      ],
+      "mean_attack_probability": 0.890642996248708,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        4,
+        7
+      ],
+      "mean_attack_probability": 0.647441633298387,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        5,
+        0
+      ],
+      "mean_attack_probability": 0.2978584725865074,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        5,
+        1
+      ],
+      "mean_attack_probability": 0.3175641545334416,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        5,
+        2
+      ],
+      "mean_attack_probability": 0.41983497243396434,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        5,
+        3
+      ],
+      "mean_attack_probability": 0.2939517048059665,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        5,
+        4
+      ],
+      "mean_attack_probability": 0.5933406182102697,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        5,
+        5
+      ],
+      "mean_attack_probability": 0.2939517048059665,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        5,
+        6
+      ],
+      "mean_attack_probability": 0.5947426589406579,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        5,
+        7
+      ],
+      "mean_attack_probability": 0.35154129599033695,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        4,
+        6,
+        0
+      ],
+      "mean_attack_probability": 0.5992530461602935,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        6,
+        1
+      ],
+      "mean_attack_probability": 0.6189587281072276,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        6,
+        2
+      ],
+      "mean_attack_probability": 0.7212295460077504,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        6,
+        3
+      ],
+      "mean_attack_probability": 0.5953462783797526,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        6,
+        4
+      ],
+      "mean_attack_probability": 0.8947351917840559,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        6,
+        5
+      ],
+      "mean_attack_probability": 0.5953462783797526,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        6,
+        6
+      ],
+      "mean_attack_probability": 0.896137232514444,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        6,
+        7
+      ],
+      "mean_attack_probability": 0.6529358695641231,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        7,
+        0
+      ],
+      "mean_attack_probability": 0.48890092270000135,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        7,
+        1
+      ],
+      "mean_attack_probability": 0.5086066046469355,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        7,
+        2
+      ],
+      "mean_attack_probability": 0.6108774225474582,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        7,
+        3
+      ],
+      "mean_attack_probability": 0.48499415491946046,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        7,
+        4
+      ],
+      "mean_attack_probability": 0.7843830683237636,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        7,
+        5
+      ],
+      "mean_attack_probability": 0.48499415491946046,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        7,
+        6
+      ],
+      "mean_attack_probability": 0.7857851090541518,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        4,
+        7,
+        7
+      ],
+      "mean_attack_probability": 0.5425837461038309,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        5,
+        0,
+        0
+      ],
+      "mean_attack_probability": 0.00775869211614729,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        0,
+        1
+      ],
+      "mean_attack_probability": 0.027464374063081498,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        0,
+        2
+      ],
+      "mean_attack_probability": 0.12973519196360425,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        0,
+        3
+      ],
+      "mean_attack_probability": 0.0038519243356063926,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        0,
+        4
+      ],
+      "mean_attack_probability": 0.3032408377399097,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        0,
+        5
+      ],
+      "mean_attack_probability": 0.0038519243356063926,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        0,
+        6
+      ],
+      "mean_attack_probability": 0.30464287847029786,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        0,
+        7
+      ],
+      "mean_attack_probability": 0.061441515519976835,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        1,
+        0
+      ],
+      "mean_attack_probability": 0.024512182100330477,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        1,
+        1
+      ],
+      "mean_attack_probability": 0.04421786404726469,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        1,
+        2
+      ],
+      "mean_attack_probability": 0.14648868194778744,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        1,
+        3
+      ],
+      "mean_attack_probability": 0.020605414319789583,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        1,
+        4
+      ],
+      "mean_attack_probability": 0.3199943277240928,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        1,
+        5
+      ],
+      "mean_attack_probability": 0.020605414319789583,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        1,
+        6
+      ],
+      "mean_attack_probability": 0.321396368454481,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        1,
+        7
+      ],
+      "mean_attack_probability": 0.07819500550416002,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        2,
+        0
+      ],
+      "mean_attack_probability": 0.10696431845035602,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        2,
+        1
+      ],
+      "mean_attack_probability": 0.12667000039729023,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        2,
+        2
+      ],
+      "mean_attack_probability": 0.228940818297813,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        2,
+        3
+      ],
+      "mean_attack_probability": 0.1030575506698151,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        2,
+        4
+      ],
+      "mean_attack_probability": 0.4024464640741184,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        2,
+        5
+      ],
+      "mean_attack_probability": 0.1030575506698151,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        2,
+        6
+      ],
+      "mean_attack_probability": 0.40384850480450657,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        2,
+        7
+      ],
+      "mean_attack_probability": 0.16064714185418555,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        3,
+        0
+      ],
+      "mean_attack_probability": 0.003906767780540897,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        3,
+        1
+      ],
+      "mean_attack_probability": 0.023612449727475105,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        3,
+        2
+      ],
+      "mean_attack_probability": 0.12588326762799787,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        3,
+        3
+      ],
+      "mean_attack_probability": 0.0,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        3,
+        4
+      ],
+      "mean_attack_probability": 0.29938891340430324,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        3,
+        5
+      ],
+      "mean_attack_probability": 0.0,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        3,
+        6
+      ],
+      "mean_attack_probability": 0.3007909541346914,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        3,
+        7
+      ],
+      "mean_attack_probability": 0.05758959118437044,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        4,
+        0
+      ],
+      "mean_attack_probability": 0.299807105088591,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        4,
+        1
+      ],
+      "mean_attack_probability": 0.3195127870355252,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        4,
+        2
+      ],
+      "mean_attack_probability": 0.42178360493604794,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        4,
+        3
+      ],
+      "mean_attack_probability": 0.2959003373080501,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        4,
+        4
+      ],
+      "mean_attack_probability": 0.5952892507123534,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        5,
+        4,
+        5
+      ],
+      "mean_attack_probability": 0.2959003373080501,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        4,
+        6
+      ],
+      "mean_attack_probability": 0.5966912914427415,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        5,
+        4,
+        7
+      ],
+      "mean_attack_probability": 0.3534899284924205,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        5,
+        0
+      ],
+      "mean_attack_probability": 0.003906767780540897,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        5,
+        1
+      ],
+      "mean_attack_probability": 0.023612449727475105,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        5,
+        2
+      ],
+      "mean_attack_probability": 0.12588326762799787,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        5,
+        3
+      ],
+      "mean_attack_probability": 0.0,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        5,
+        4
+      ],
+      "mean_attack_probability": 0.29938891340430324,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        5,
+        5
+      ],
+      "mean_attack_probability": 0.0,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        5,
+        6
+      ],
+      "mean_attack_probability": 0.3007909541346914,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        5,
+        7
+      ],
+      "mean_attack_probability": 0.05758959118437044,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        6,
+        0
+      ],
+      "mean_attack_probability": 0.305301341354327,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        6,
+        1
+      ],
+      "mean_attack_probability": 0.32500702330126124,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        6,
+        2
+      ],
+      "mean_attack_probability": 0.42727784120178397,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        6,
+        3
+      ],
+      "mean_attack_probability": 0.30139457357378613,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        6,
+        4
+      ],
+      "mean_attack_probability": 0.6007834869780894,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        5,
+        6,
+        5
+      ],
+      "mean_attack_probability": 0.30139457357378613,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        6,
+        6
+      ],
+      "mean_attack_probability": 0.6021855277084776,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        5,
+        6,
+        7
+      ],
+      "mean_attack_probability": 0.3589841647581566,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        7,
+        0
+      ],
+      "mean_attack_probability": 0.19494921789403483,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        7,
+        1
+      ],
+      "mean_attack_probability": 0.21465489984096905,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        7,
+        2
+      ],
+      "mean_attack_probability": 0.31692571774149175,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        7,
+        3
+      ],
+      "mean_attack_probability": 0.19104245011349394,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        7,
+        4
+      ],
+      "mean_attack_probability": 0.4904313635177972,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        5,
+        7,
+        5
+      ],
+      "mean_attack_probability": 0.19104245011349394,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        5,
+        7,
+        6
+      ],
+      "mean_attack_probability": 0.49183340424818534,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        5,
+        7,
+        7
+      ],
+      "mean_attack_probability": 0.24863204129786434,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        0,
+        0
+      ],
+      "mean_attack_probability": 0.30906545899383864,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        0,
+        1
+      ],
+      "mean_attack_probability": 0.32877114094077287,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        0,
+        2
+      ],
+      "mean_attack_probability": 0.43104195884129565,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        0,
+        3
+      ],
+      "mean_attack_probability": 0.30515869121329775,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        0,
+        4
+      ],
+      "mean_attack_probability": 0.6045476046176009,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        0,
+        5
+      ],
+      "mean_attack_probability": 0.30515869121329775,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        0,
+        6
+      ],
+      "mean_attack_probability": 0.6059496453479892,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        0,
+        7
+      ],
+      "mean_attack_probability": 0.3627482823976682,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        1,
+        0
+      ],
+      "mean_attack_probability": 0.3258189489780218,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        1,
+        1
+      ],
+      "mean_attack_probability": 0.345524630924956,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        1,
+        2
+      ],
+      "mean_attack_probability": 0.4477954488254788,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        1,
+        3
+      ],
+      "mean_attack_probability": 0.32191218119748094,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        1,
+        4
+      ],
+      "mean_attack_probability": 0.6213010946017842,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        1,
+        5
+      ],
+      "mean_attack_probability": 0.32191218119748094,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        1,
+        6
+      ],
+      "mean_attack_probability": 0.6227031353321724,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        1,
+        7
+      ],
+      "mean_attack_probability": 0.3795017723818514,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        2,
+        0
+      ],
+      "mean_attack_probability": 0.40827108532804735,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        2,
+        1
+      ],
+      "mean_attack_probability": 0.4279767672749815,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        2,
+        2
+      ],
+      "mean_attack_probability": 0.5302475851755043,
+      "probability_score": 8,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        2,
+        3
+      ],
+      "mean_attack_probability": 0.40436431754750646,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        2,
+        4
+      ],
+      "mean_attack_probability": 0.7037532309518096,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        2,
+        5
+      ],
+      "mean_attack_probability": 0.40436431754750646,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        2,
+        6
+      ],
+      "mean_attack_probability": 0.7051552716821979,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        2,
+        7
+      ],
+      "mean_attack_probability": 0.4619539087318769,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        3,
+        0
+      ],
+      "mean_attack_probability": 0.30521353465823226,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        3,
+        1
+      ],
+      "mean_attack_probability": 0.3249192166051665,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        3,
+        2
+      ],
+      "mean_attack_probability": 0.4271900345056892,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        3,
+        3
+      ],
+      "mean_attack_probability": 0.30130676687769137,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        3,
+        4
+      ],
+      "mean_attack_probability": 0.6006956802819946,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        3,
+        5
+      ],
+      "mean_attack_probability": 0.30130676687769137,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        3,
+        6
+      ],
+      "mean_attack_probability": 0.6020977210123828,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        3,
+        7
+      ],
+      "mean_attack_probability": 0.3588963580620618,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        4,
+        0
+      ],
+      "mean_attack_probability": 0.6011138719662824,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        4,
+        1
+      ],
+      "mean_attack_probability": 0.6208195539132165,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        4,
+        2
+      ],
+      "mean_attack_probability": 0.7230903718137394,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        4,
+        3
+      ],
+      "mean_attack_probability": 0.5972071041857414,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        4,
+        4
+      ],
+      "mean_attack_probability": 0.8965960175900447,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        4,
+        5
+      ],
+      "mean_attack_probability": 0.5972071041857414,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        4,
+        6
+      ],
+      "mean_attack_probability": 0.8979980583204329,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        4,
+        7
+      ],
+      "mean_attack_probability": 0.6547966953701119,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        5,
+        0
+      ],
+      "mean_attack_probability": 0.30521353465823226,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        5,
+        1
+      ],
+      "mean_attack_probability": 0.3249192166051665,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        5,
+        2
+      ],
+      "mean_attack_probability": 0.4271900345056892,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        5,
+        3
+      ],
+      "mean_attack_probability": 0.30130676687769137,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        5,
+        4
+      ],
+      "mean_attack_probability": 0.6006956802819946,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        5,
+        5
+      ],
+      "mean_attack_probability": 0.30130676687769137,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        5,
+        6
+      ],
+      "mean_attack_probability": 0.6020977210123828,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        5,
+        7
+      ],
+      "mean_attack_probability": 0.3588963580620618,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        6,
+        6,
+        0
+      ],
+      "mean_attack_probability": 0.6066081082320184,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        6,
+        1
+      ],
+      "mean_attack_probability": 0.6263137901789525,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        6,
+        2
+      ],
+      "mean_attack_probability": 0.7285846080794753,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        6,
+        3
+      ],
+      "mean_attack_probability": 0.6027013404514775,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        6,
+        4
+      ],
+      "mean_attack_probability": 0.9020902538557807,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        6,
+        5
+      ],
+      "mean_attack_probability": 0.6027013404514775,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        6,
+        6
+      ],
+      "mean_attack_probability": 0.9034922945861689,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        6,
+        7
+      ],
+      "mean_attack_probability": 0.660290931635848,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        7,
+        0
+      ],
+      "mean_attack_probability": 0.4962559847717262,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        7,
+        1
+      ],
+      "mean_attack_probability": 0.5159616667186604,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        7,
+        2
+      ],
+      "mean_attack_probability": 0.6182324846191831,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        7,
+        3
+      ],
+      "mean_attack_probability": 0.4923492169911852,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        7,
+        4
+      ],
+      "mean_attack_probability": 0.7917381303954886,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        7,
+        5
+      ],
+      "mean_attack_probability": 0.4923492169911852,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        7,
+        6
+      ],
+      "mean_attack_probability": 0.7931401711258768,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        6,
+        7,
+        7
+      ],
+      "mean_attack_probability": 0.5499388081755557,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        0,
+        0
+      ],
+      "mean_attack_probability": 0.24157716041651633,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        0,
+        1
+      ],
+      "mean_attack_probability": 0.26128284236345056,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        0,
+        2
+      ],
+      "mean_attack_probability": 0.3635536602639733,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        0,
+        3
+      ],
+      "mean_attack_probability": 0.23767039263597545,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        0,
+        4
+      ],
+      "mean_attack_probability": 0.5370593060402787,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        0,
+        5
+      ],
+      "mean_attack_probability": 0.23767039263597545,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        0,
+        6
+      ],
+      "mean_attack_probability": 0.5384613467706668,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        0,
+        7
+      ],
+      "mean_attack_probability": 0.29525998382034585,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        1,
+        0
+      ],
+      "mean_attack_probability": 0.2583306504006995,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        1,
+        1
+      ],
+      "mean_attack_probability": 0.27803633234763375,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        1,
+        2
+      ],
+      "mean_attack_probability": 0.3803071502481565,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        1,
+        3
+      ],
+      "mean_attack_probability": 0.25442388262015864,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        1,
+        4
+      ],
+      "mean_attack_probability": 0.5538127960244619,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        1,
+        5
+      ],
+      "mean_attack_probability": 0.25442388262015864,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        1,
+        6
+      ],
+      "mean_attack_probability": 0.5552148367548501,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        1,
+        7
+      ],
+      "mean_attack_probability": 0.3120134738045291,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        2,
+        0
+      ],
+      "mean_attack_probability": 0.3407827867507251,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        2,
+        1
+      ],
+      "mean_attack_probability": 0.36048846869765927,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        2,
+        2
+      ],
+      "mean_attack_probability": 0.462759286598182,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        2,
+        3
+      ],
+      "mean_attack_probability": 0.3368760189701841,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        2,
+        4
+      ],
+      "mean_attack_probability": 0.6362649323744874,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        2,
+        5
+      ],
+      "mean_attack_probability": 0.3368760189701841,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        2,
+        6
+      ],
+      "mean_attack_probability": 0.6376669731048756,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        2,
+        7
+      ],
+      "mean_attack_probability": 0.39446561015455456,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        3,
+        0
+      ],
+      "mean_attack_probability": 0.23772523608090992,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        3,
+        1
+      ],
+      "mean_attack_probability": 0.2574309180278442,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        3,
+        2
+      ],
+      "mean_attack_probability": 0.3597017359283669,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        3,
+        3
+      ],
+      "mean_attack_probability": 0.23381846830036904,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        3,
+        4
+      ],
+      "mean_attack_probability": 0.5332073817046723,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        3,
+        5
+      ],
+      "mean_attack_probability": 0.23381846830036904,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        3,
+        6
+      ],
+      "mean_attack_probability": 0.5346094224350605,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        3,
+        7
+      ],
+      "mean_attack_probability": 0.29140805948473947,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        4,
+        0
+      ],
+      "mean_attack_probability": 0.53362557338896,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        4,
+        1
+      ],
+      "mean_attack_probability": 0.5533312553358942,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        4,
+        2
+      ],
+      "mean_attack_probability": 0.6556020732364171,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        4,
+        3
+      ],
+      "mean_attack_probability": 0.5297188056084191,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        4,
+        4
+      ],
+      "mean_attack_probability": 0.8291077190127224,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        4,
+        5
+      ],
+      "mean_attack_probability": 0.5297188056084191,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        4,
+        6
+      ],
+      "mean_attack_probability": 0.8305097597431107,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        4,
+        7
+      ],
+      "mean_attack_probability": 0.5873083967927896,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        5,
+        0
+      ],
+      "mean_attack_probability": 0.23772523608090992,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        5,
+        1
+      ],
+      "mean_attack_probability": 0.2574309180278442,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        5,
+        2
+      ],
+      "mean_attack_probability": 0.3597017359283669,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        5,
+        3
+      ],
+      "mean_attack_probability": 0.23381846830036904,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        5,
+        4
+      ],
+      "mean_attack_probability": 0.5332073817046723,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        5,
+        5
+      ],
+      "mean_attack_probability": 0.23381846830036904,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        5,
+        6
+      ],
+      "mean_attack_probability": 0.5346094224350605,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        5,
+        7
+      ],
+      "mean_attack_probability": 0.29140805948473947,
+      "probability_score": 0,
+      "majority_score": 0
+    },
+    {
+      "leaves": [
+        7,
+        6,
+        0
+      ],
+      "mean_attack_probability": 0.5391198096546961,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        6,
+        1
+      ],
+      "mean_attack_probability": 0.5588254916016303,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        6,
+        2
+      ],
+      "mean_attack_probability": 0.661096309502153,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        6,
+        3
+      ],
+      "mean_attack_probability": 0.5352130418741551,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        6,
+        4
+      ],
+      "mean_attack_probability": 0.8346019552784584,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        6,
+        5
+      ],
+      "mean_attack_probability": 0.5352130418741551,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        6,
+        6
+      ],
+      "mean_attack_probability": 0.8360039960088467,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        6,
+        7
+      ],
+      "mean_attack_probability": 0.5928026330585255,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        7,
+        0
+      ],
+      "mean_attack_probability": 0.42876768619440386,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        7,
+        1
+      ],
+      "mean_attack_probability": 0.44847336814133804,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        7,
+        2
+      ],
+      "mean_attack_probability": 0.5507441860418608,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        7,
+        3
+      ],
+      "mean_attack_probability": 0.424860918413863,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        7,
+        4
+      ],
+      "mean_attack_probability": 0.7242498318181663,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        7,
+        5
+      ],
+      "mean_attack_probability": 0.424860918413863,
+      "probability_score": 0,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        7,
+        6
+      ],
+      "mean_attack_probability": 0.7256518725485543,
+      "probability_score": 8,
+      "majority_score": 8
+    },
+    {
+      "leaves": [
+        7,
+        7,
+        7
+      ],
+      "mean_attack_probability": 0.48245050959823343,
+      "probability_score": 0,
+      "majority_score": 8
+    }
+  ],
+  "decision": "mean normalized leaf attack probability > 0.5; ties nominal",
+  "majority_decision": "strict majority of binary argmax leaf classes; leaf ties class 0"
+}

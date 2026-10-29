@@ -1,0 +1,15 @@
+{
+  "comparison_status": "assumption_bound_reconstruction",
+  "mode": "exact_distinct_diagnostic",
+  "window_seconds": 3600,
+  "window_anchor_ns": null,
+  "heavy_domains": null,
+  "heavy_domains_provenance": null,
+  "domain_mapping_provenance": null,
+  "psl_private_rules": null,
+  "input_capture_scope": null,
+  "domain_overrides": [],
+  "seed": "unused-in-exact-mode",
+  "exact_threshold": 10000,
+  "profile_note": "Exact-set diagnostic for target threshold, not WORD's approximate detector; never report as WORD measured performance."
+}

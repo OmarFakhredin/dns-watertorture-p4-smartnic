@@ -1,0 +1,18 @@
+{
+  "comparison_status": "assumption_bound_reconstruction",
+  "mode": "coupon_reconstruction",
+  "window_seconds": 3600,
+  "window_anchor_ns": null,
+  "heavy_domains": null,
+  "heavy_domains_provenance": null,
+  "domain_mapping_provenance": null,
+  "psl_private_rules": null,
+  "input_capture_scope": null,
+  "domain_overrides": [],
+  "seed": "predeclare-before-evaluation",
+  "coupon_types": 32,
+  "coupon_threshold": 23,
+  "inverse_coupon_probability": 8192,
+  "first_coupon_keep_probability": null,
+  "profile_note": "23 coupons/1h from WORD; 32 types and 1/8192 per coupon reconstructed from BeauCoup. Coin probability, hash, windows, heavy list are not verified original WORD. Fill null values explicitly; do not tune on evaluation labels."
+}
